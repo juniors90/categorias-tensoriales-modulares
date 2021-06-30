@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Categorías Tensoriales Modulares y Grupos Finitos &mdash; documentación de Categorías Tensoriales Modulares y Grupos Finitos - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="1. Preliminares acerca de Álgebras de Hopf" href="Notas/00-nociones-preliminares.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Categorías Tensoriales Modulares y Grupos Finitos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Notas/00-nociones-preliminares.html">1. Preliminares acerca de Álgebras de Hopf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notas/01-teoria-de-representaciones.html">2. Teoría de Representaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html">3. Categoría de Representaciones de Álgebras de Hopf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notas/03-el-doble-cuantico-de-un-grupo-finito.html">4. El Doble Cuántico de un grupo finito</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Categorías Tensoriales Modulares y Grupos Finitos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Categorías Tensoriales Modulares y Grupos Finitos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="categorias-tensoriales-modulares-y-grupos-finitos">
+<h1>Categorías Tensoriales Modulares y Grupos Finitos<a class="headerlink" href="#categorias-tensoriales-modulares-y-grupos-finitos" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="fundamentos">
+<h2>Fundamentos<a class="headerlink" href="#fundamentos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una clase particularmente importante de categorías, es la de las categorías tensoriales finitas sobre un cuerpo <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> algebraicamente cerrado y de característica cero. Recordemos que una categoría monoidal es una categoría munida de un producto tensorial y de un objeto unidad sujetos a ciertos axiomas de asociatividad y unidad.</p>
+<p>A través de este concepto, se engloba a la teoría de representaciones de grupos, de álgebras de Lie y, más generalmente, de álgebras de Hopf, a través de sus categorías de representaciones, que resultan naturalmente equipadas con un producto tensorial. A su vez, una categoría tensorial finita es una categoría monoidal Abeliana <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>-lineal, con ciertas propiedades.</p>
+<p>En el caso en el que la categoría es semisimple, se dice que es una categoría de fusión (bajo ciertos axiomas); y se dice finita en el caso en que exista una cantidad finita de objetos simples <span class="math notranslate nohighlight">\(\mathcal{S}=\{S_{1},\dots,S_{n}\}\)</span>. En este caso, la categoría posee una descripción combinatoria, a través de las reglas de multiplicación (o «fusión») de los objetos simples:</p>
+<div class="math notranslate nohighlight">
+\[S_{i}\otimes S_{j}=\bigoplus_{S_{k}\in \mathcal{S}} S_{k}^{\oplus N_{ij}^{j}}.\]</div>
+<p>Asociada a estas constantes de estructura <span class="math notranslate nohighlight">\((N_{ij}^{j})_{i,j,k}\)</span>, se definen matrices <span class="math notranslate nohighlight">\(S\)</span> y <span class="math notranslate nohighlight">\(T\)</span> asociadas a la estructura monoidal de la categoría. Cuando la matriz <span class="math notranslate nohighlight">\(S\)</span> es invertible, se dice que la categoría es modular. Estas matrices dan una representación proyectiva del grupo <span class="math notranslate nohighlight">\(\operatorname{SL}(2,\mathbb{Z})\)</span>.</p>
+</div>
+<div class="section" id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El objetivo principal es familiarizarse con los conceptos básicos de la teoría de categorías, y más aún con el área de las categorías tensoriales y modulares. Se desarollarán ejemplos, como el de la categoría de representaciones de un grupo finito.</p>
+<p>Un ejemplo esencial y no inmediato de categoría modular es la de representaciones del doble de Drinfeld o doble cuántico de <span class="math notranslate nohighlight">\(G\)</span>, denotado <span class="math notranslate nohighlight">\(D(G)\)</span>. Este álgebra tiene una estructura de álgebra de Hopf, lo que dota a la categoría de la estructura tensorial. Puede verse que la misma es semisimple y que la <span class="math notranslate nohighlight">\(S\)</span>-matriz asociada es invertible. Se buscará desarrollar estos resultados en detalle y dar ejemplos concretos de <span class="math notranslate nohighlight">\(S\)</span>-matrices asociados a algunos grupos finitos (<span class="math notranslate nohighlight">\(\mathbb{Z}/n\mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Z}/p\mathbb{Z}\rtimes \mathbb{Z}/q\mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{S}_n\)</span>, entre otros).</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Notas/00-nociones-preliminares.html">1. Preliminares acerca de Álgebras de Hopf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Notas/00-nociones-preliminares.html#algebras-de-hopf">1.1. Álgebras de Hopf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Notas/00-nociones-preliminares.html#bialgebra">1.1.1. Biálgebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/00-nociones-preliminares.html#ejemplo">1.1.2. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/00-nociones-preliminares.html#antipoda">1.1.3. Antípoda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/00-nociones-preliminares.html#algebra-de-hopf">1.1.4. Álgebra de Hopf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/00-nociones-preliminares.html#id3">1.1.5. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/00-nociones-preliminares.html#lema">1.1.6. Lema</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Notas/01-teoria-de-representaciones.html">2. Teoría de Representaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html">3. Categoría de Representaciones de Álgebras de Hopf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#representacion-de-un-algebra">3.1. Representación de un álgebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#representaciones-equivalentes">3.1.1. Representaciones Equivalentes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#representaciones-de-dimension-finita">3.1.2. Representaciones de dimensión finita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#subespacios-invariantes">3.1.3. Subespacios Invariantes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#representacion-irreducible">3.1.4. Representación Irreducible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#la-categoria-rep-a">3.1.5. La categoría Rep(A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#r-matriz-universal">3.1.6. R-matriz universal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#bialgebra-cuasi-triangular">3.1.7. Biálgebra cuasi-triangular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#lema">3.1.8. Lema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#algebras-de-hopf-y-duales">3.2. Álgebras de Hopf y Duales.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#id4">3.2.1. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#id5">3.2.2. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#id6">3.2.3. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#id7">3.2.4. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#id8">3.2.5. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#teorema">3.2.6. Teorema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#ribbon-hopf-algebras">3.3. Ribbon Hopf algebras.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#categoria-de-cinta">3.3.1. Categoría de cinta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#algebra-de-hopf-de-cinta">3.3.2. Álgebra de Hopf de cinta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#id10">3.3.3. Teorema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Notas/02-categoria-de-representaciones-de-algebras-de-hopf.html#observacion">3.3.4. Observación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Notas/03-el-doble-cuantico-de-un-grupo-finito.html">4. El Doble Cuántico de un grupo finito</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Notas/00-nociones-preliminares.html" class="btn btn-neutral float-right" title="1. Preliminares acerca de Álgebras de Hopf" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

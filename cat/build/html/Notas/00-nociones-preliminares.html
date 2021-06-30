@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. Preliminares acerca de Álgebras de Hopf &mdash; documentación de Categorías Tensoriales Modulares y Grupos Finitos - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="2. Teoría de Representaciones" href="01-teoria-de-representaciones.html" />
+    <link rel="prev" title="Categorías Tensoriales Modulares y Grupos Finitos" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Categorías Tensoriales Modulares y Grupos Finitos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Preliminares acerca de Álgebras de Hopf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#algebras-de-hopf">1.1. Álgebras de Hopf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bialgebra">1.1.1. Biálgebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo">1.1.2. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#antipoda">1.1.3. Antípoda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algebra-de-hopf">1.1.4. Álgebra de Hopf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.1.5. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lema">1.1.6. Lema</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01-teoria-de-representaciones.html">2. Teoría de Representaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-categoria-de-representaciones-de-algebras-de-hopf.html">3. Categoría de Representaciones de Álgebras de Hopf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-el-doble-cuantico-de-un-grupo-finito.html">4. El Doble Cuántico de un grupo finito</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Categorías Tensoriales Modulares y Grupos Finitos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Preliminares acerca de Álgebras de Hopf</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Notas/00-nociones-preliminares.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="preliminares-acerca-de-algebras-de-hopf">
+<h1><span class="section-number">1. </span>Preliminares acerca de Álgebras de Hopf<a class="headerlink" href="#preliminares-acerca-de-algebras-de-hopf" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="algebras-de-hopf">
+<h2><span class="section-number">1.1. </span>Álgebras de Hopf<a class="headerlink" href="#algebras-de-hopf" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Como hemos visto en el ejemplo de las teorías de cuerpos cuánticos topológicos bidimensionales, la anillo de grupo complejo <span class="math notranslate nohighlight">\(A = \mathbb{C}G\)</span> de un grupo finito <span class="math notranslate nohighlight">\(G\)</span> tiene mucha estructura algebraica. En primer lugar, es un álgebra sobre <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> con respecto a la multiplicación</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \mu : A &amp;\otimes A \to A ;&amp;&amp;&amp;
+    \left(\sum_{g\in G} \lambda_{g}g\right) &amp;\otimes \left(\sum_{g\in G}\rho_{h} h\right)\mapsto \sum_{g,h\in G} \lambda_{g} \rho_{h} gh
+\end{align}\]</div>
+<p>con unidad <span class="math notranslate nohighlight">\(e \in G \subset \mathbb{C}G\)</span>. Dual a esta noción <span class="math notranslate nohighlight">\(\mathbb{C}G\)</span> también lleva una estructura de coalgebra, que la convierte en una <a class="reference internal" href="#bialgebra">biálgebra</a> en el sentido de la siguiente definición [5].</p>
+<div class="section" id="bialgebra">
+<span id="id1"></span><h3><span class="section-number">1.1.1. </span>Biálgebra<a class="headerlink" href="#bialgebra" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Una bialgebra <span class="math notranslate nohighlight">\(A\)</span> sobre un cuerpo <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> es una tupla <span class="math notranslate nohighlight">\((A, \mu, u, \Delta, \epsilon)\)</span>, tal que <span class="math notranslate nohighlight">\((A, \mu, u)\)</span> es un álgebra sobre <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> con multiplicación <span class="math notranslate nohighlight">\(\mu: A \otimes A \to A\)</span> y unidad <span class="math notranslate nohighlight">\(u: \mathbb{F} \to A\)</span> junto con una comultiplicación <span class="math notranslate nohighlight">\(\Delta: A \to A\otimes A\)</span> y un couinidad <span class="math notranslate nohighlight">\(\epsilon :A \to \mathbb{F}\)</span>, tal que <span class="math notranslate nohighlight">\(\Delta\)</span> y <span class="math notranslate nohighlight">\(\epsilon\)</span> son homomorfismos de álgebra. Los axiomas del álgebra (asociatividad y unidad) están codificados en la conmutatividad de los siguientes diagramas</p>
+<p>en el que las flechas sin etiquetar marcan los isomorfismos canónicos. Los axiomas de una coálgebra producen la conmutatividad de</p>
+<p>y la compatibilidad de ambas estructuras obliga a los siguientes diagramas a conmutar</p>
+<p>donde las flechas sin marcar son nuevamente canónicas y <span class="math notranslate nohighlight">\(\tau: A^{\otimes 4} \to A^{\otimes 4}\)</span> viene dado por <span class="math notranslate nohighlight">\(\tau (a \otimes b \otimes c \otimes d) = a \otimes c \otimes b \otimes d\)</span>.</p>
+</div>
+<div class="section" id="ejemplo">
+<h3><span class="section-number">1.1.2. </span>Ejemplo<a class="headerlink" href="#ejemplo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El álgebra de grupo complejo <span class="math notranslate nohighlight">\(A = \mathbb{C}G\)</span> con la multiplicación y unidad anteriores junto con la multiplicación</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \Delta: A &amp;\to A \otimes A &amp;&amp;;&amp; \sum_{g\in G}\lambda_{g} g &amp;\mapsto \sum_{g\in G}\lambda g (g \otimes g)
+\end{align}\]</div>
+<p>y counidad</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \epsilon :A &amp;\to \mathbb{C} &amp;&amp;;&amp;\sum_{g\in G} \lambda_{g} g &amp;\mapsto \sum_{g\in G} \lambda_{g}
+\end{align}\]</div>
+<p>es una <a class="reference internal" href="#bialgebra">biálgebra</a>. (ejercicio)</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Hemos visto que <span class="math notranslate nohighlight">\(A = \mathbb{C}G\)</span> también lleva una traza</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    tr: A &amp;\to \mathbb{C} &amp;&amp;;&amp; \sum_{g\in G} \lambda_{g} g \mapsto \lambda_{e},
+\end{align}\]</div>
+<p>lo que le confiere la estructura de un álgebra de Frobenius. La estructura de coalgebra obtenida a partir de esto se diferencia de la de la definición anterior en que las condiciones (1) y (2) no se satisfacen para ella. La comultiplicación <span class="math notranslate nohighlight">\(\delta: A \to A \otimes A\)</span> de un álgebra de Frobenius solo tiene que ser un homomorfismo de <span class="math notranslate nohighlight">\(A\)</span>-módulo, mientras que para una bialgebra exigimos que <span class="math notranslate nohighlight">\(\Delta: A \to A \otimes A\)</span> sea un homomorfismo de álgebra con respecto a la estructura del álgebra en <span class="math notranslate nohighlight">\(A\)</span>. Por lo tanto, las álgebras y bialgebras de Frobenius deben considerarse como dos tipos diferentes de estructuras.</p>
+</div>
+<p>El álgebra de grupo <span class="math notranslate nohighlight">\(A = \mathbb{C}G\)</span> tiene otra característica no codificada en la estructura de bialgebra: cada elemento de grupo tiene una inversa. Esto lleva a la siguiente definición</p>
+</div>
+<div class="section" id="antipoda">
+<span id="id2"></span><h3><span class="section-number">1.1.3. </span>Antípoda<a class="headerlink" href="#antipoda" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> una <a class="reference internal" href="#bialgebra">biálgebra</a>. Un homomorfismo <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>-lineal <span class="math notranslate nohighlight">\(\mathcal{S}: A \to A\)</span> se llama antípoda si encaja en el siguiente diagrama conmutativo</p>
+</div>
+<div class="section" id="algebra-de-hopf">
+<span id="hopf"></span><h3><span class="section-number">1.1.4. </span>Álgebra de Hopf<a class="headerlink" href="#algebra-de-hopf" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Una <a class="reference internal" href="#bialgebra">biálgebra</a> <span class="math notranslate nohighlight">\(A\)</span> junto con una <a class="reference internal" href="#antipoda">antípoda</a> <span class="math notranslate nohighlight">\(\mathcal{S}: A \to A\)</span> se llama álgebra de Hopf.</p>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">1.1.5. </span>Ejemplo<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El álgebra de grupo <span class="math notranslate nohighlight">\(A = \mathbb{C}G\)</span> es un álgebra de <a class="reference internal" href="#hopf">Hopf</a> con la <a class="reference internal" href="#antipoda">antípoda</a></p>
+<div class="math notranslate nohighlight">
+\[\mathcal{S} \left(\sum_{g\in G} \lambda_{g}g\right) = \sum_{g\in G} \lambda_{g}g^{-1}.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Usando <span class="math notranslate nohighlight">\(\Delta\)</span> y <span class="math notranslate nohighlight">\(\mu\)</span> podemos dotar a <span class="math notranslate nohighlight">\(Hom (A, A)\)</span> de una estructura de álgebra:</p>
+<ul class="simple">
+<li><p>Sea <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(g \in Hom (A, A)\)</span>. Entonces definimos</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f \ast g : A \stackrel{\Delta}{\longrightarrow} A \otimes A \stackrel{f\otimes g}{\longrightarrow} A \otimes A \stackrel{\mu}{\longrightarrow} A\]</div>
+<p>Esta multiplicación, que es diferente de la canónica dada por composición, convierte a <span class="math notranslate nohighlight">\(Hom (A, A)\)</span> en un álgebra.</p>
+<ul class="simple">
+<li><p>La unidad con respecto a <span class="math notranslate nohighlight">\(\ast\)</span> viene dada por</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[u \circ \epsilon : A \to k \to A.\]</div>
+<p>Por lo tanto, la condición de que <span class="math notranslate nohighlight">\(\mathcal{S}: A \to A\)</span> sea una <a class="reference internal" href="#antipoda">antípoda</a> significa que es una inversa de <span class="math notranslate nohighlight">\(id_{A}\)</span> con respecto a <span class="math notranslate nohighlight">\(\ast\)</span>, es decir, <span class="math notranslate nohighlight">\(id_{A}\ast S = S \ast id_{A} = u \circ \epsilon\)</span>. Desentrañar la definición de <span class="math notranslate nohighlight">\(\ast\)</span> produce el diagrama conmutativo en la definición de <a class="reference internal" href="#antipoda">antípoda</a>.</p>
+</div>
+</div>
+<div class="section" id="lema">
+<h3><span class="section-number">1.1.6. </span>Lema<a class="headerlink" href="#lema" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><em>Sea</em> <span class="math notranslate nohighlight">\(A\)</span> <em>un álgebra de Hopf sobre un cuerpo</em> <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>, <em>que es de dimensión finita como un</em> <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>-<em>espacio vectorial. Entonces su espacio dual</em> <span class="math notranslate nohighlight">\(A^{\ast} = Hom (A, \mathbb{F})\)</span> <em>se describe de manera canónica en la prueba nuevamente como un álgebra de Hopf.</em></p>
+<p><strong>Demostración:</strong></p>
+<p>Dado que <span class="math notranslate nohighlight">\((A \otimes A)^{\ast} = A^{\ast} \otimes A^{\ast}\)</span> en el caso de dimensión finita, el espacio <span class="math notranslate nohighlight">\(A^{\ast}\)</span> es una bialgebra con multiplicación <span class="math notranslate nohighlight">\(\mu ' = \Delta^{\ast}: A^{\ast} \otimes A^{\ast} \to A^{\ast}\)</span>, unidad <span class="math notranslate nohighlight">\(u ' =\epsilon^{\ast}: \mathbb{F} \to A^{\ast}\)</span>, comultiplicación <span class="math notranslate nohighlight">\(\Delta ' = \mu^{\ast}: A^{\ast} \to A^{\ast} \otimes A^{\ast}\)</span> y counidad <span class="math notranslate nohighlight">\(\epsilon' = u^{\ast}: A^{\ast} \to \mathbb{F}\)</span>. Dado que el funtor dualizante es contravariante, convierte los dos primeros diagramas de la definición 1.1 en los dos segundos diagramas y viceversa. La condición de compatibilidad de la comultiplicación <span class="math notranslate nohighlight">\(\Delta\)</span> y la counidad <span class="math notranslate nohighlight">\(\epsilon\)</span> fue que son homomorfismos de álgebra. Al girar 90 grados los diagramas (1) y (2), vemos que esta condición es equivalente al hecho de que <span class="math notranslate nohighlight">\(\mu\)</span> y <span class="math notranslate nohighlight">\(u\)</span> son homomorfismos de coalgebra.</p>
+<p>Por lo tanto, los diagramas correspondientes para <span class="math notranslate nohighlight">\(\Delta '\)</span>, <span class="math notranslate nohighlight">\(\mu '\)</span>, <span class="math notranslate nohighlight">\(\epsilon '\)</span> y <span class="math notranslate nohighlight">\(u '\)</span> siguen conmutando.</p>
+<p>Si aplicamos el funtor dualizante al diagrama de definición de la antípoda dado en la definición 1.3, se deduce de la simetría de ese diagrama que <span class="math notranslate nohighlight">\(\mathcal{S}^{\ast}: A^{\ast} \to A^{\ast}\)</span> es una antípoda de la bialgebra <span class="math notranslate nohighlight">\(A^{\ast}\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="01-teoria-de-representaciones.html" class="btn btn-neutral float-right" title="2. Teoría de Representaciones" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Categorías Tensoriales Modulares y Grupos Finitos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

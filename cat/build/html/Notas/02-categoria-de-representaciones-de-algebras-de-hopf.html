@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3. Categoría de Representaciones de Álgebras de Hopf &mdash; documentación de Categorías Tensoriales Modulares y Grupos Finitos - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="4. El Doble Cuántico de un grupo finito" href="03-el-doble-cuantico-de-un-grupo-finito.html" />
+    <link rel="prev" title="2. Teoría de Representaciones" href="01-teoria-de-representaciones.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Categorías Tensoriales Modulares y Grupos Finitos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00-nociones-preliminares.html">1. Preliminares acerca de Álgebras de Hopf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-teoria-de-representaciones.html">2. Teoría de Representaciones</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Categoría de Representaciones de Álgebras de Hopf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#representacion-de-un-algebra">3.1. Representación de un álgebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#representaciones-equivalentes">3.1.1. Representaciones Equivalentes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#representaciones-de-dimension-finita">3.1.2. Representaciones de dimensión finita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subespacios-invariantes">3.1.3. Subespacios Invariantes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#representacion-irreducible">3.1.4. Representación Irreducible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#la-categoria-rep-a">3.1.5. La categoría Rep(A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r-matriz-universal">3.1.6. R-matriz universal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bialgebra-cuasi-triangular">3.1.7. Biálgebra cuasi-triangular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lema">3.1.8. Lema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#algebras-de-hopf-y-duales">3.2. Álgebras de Hopf y Duales.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.2.1. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.2.2. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3.2.3. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">3.2.4. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">3.2.5. Lema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#teorema">3.2.6. Teorema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-hopf-algebras">3.3. Ribbon Hopf algebras.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#categoria-de-cinta">3.3.1. Categoría de cinta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algebra-de-hopf-de-cinta">3.3.2. Álgebra de Hopf de cinta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">3.3.3. Teorema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#observacion">3.3.4. Observación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03-el-doble-cuantico-de-un-grupo-finito.html">4. El Doble Cuántico de un grupo finito</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Categorías Tensoriales Modulares y Grupos Finitos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">3. </span>Categoría de Representaciones de Álgebras de Hopf</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Notas/02-categoria-de-representaciones-de-algebras-de-hopf.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="categoria-de-representaciones-de-algebras-de-hopf">
+<h1><span class="section-number">3. </span>Categoría de Representaciones de Álgebras de Hopf<a class="headerlink" href="#categoria-de-representaciones-de-algebras-de-hopf" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Las representaciones de dimensión finita de un grupo finito <span class="math notranslate nohighlight">\(G\)</span> dan un ejemplo sencillo de una categoría monoidal rígida con simetría. En esta sección generalizaremos este concepto al caso de las álgebras de Hopf.</p>
+<div class="section" id="representacion-de-un-algebra">
+<span id="id1"></span><h2><span class="section-number">3.1. </span>Representación de un álgebra<a class="headerlink" href="#representacion-de-un-algebra" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> un álgebra sobre el cuerpo <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>. Una representación de <span class="math notranslate nohighlight">\(A\)</span> es un <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>-espacio vectorial <span class="math notranslate nohighlight">\(V\)</span> junto con un homomorfismo de álgebra <span class="math notranslate nohighlight">\(\pi: A \to End (V)\)</span>.</p>
+<div class="section" id="representaciones-equivalentes">
+<span id="id2"></span><h3><span class="section-number">3.1.1. </span>Representaciones Equivalentes<a class="headerlink" href="#representaciones-equivalentes" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Dos representaciones <span class="math notranslate nohighlight">\(\pi\)</span> en <span class="math notranslate nohighlight">\(V\)</span> y <span class="math notranslate nohighlight">\(\pi'\)</span> en <span class="math notranslate nohighlight">\(W\)</span> se denominan equivalentes si existe un isomorfismo <span class="math notranslate nohighlight">\(T: V \to W\)</span> tal que para todo <span class="math notranslate nohighlight">\(a \in A\)</span> y <span class="math notranslate nohighlight">\(v \in V\)</span></p>
+<div class="math notranslate nohighlight">
+\[T \pi(a) v = \pi'(a) Tv.\]</div>
+<p>Un mapa <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>-lineal <span class="math notranslate nohighlight">\(T: V \to W\)</span> que satisface (3) para todo <span class="math notranslate nohighlight">\(a \in A\)</span> y <span class="math notranslate nohighlight">\(v \in V\)</span> se llamará homomorfismo equivariante o entrelazado.</p>
+</div>
+<div class="section" id="representaciones-de-dimension-finita">
+<h3><span class="section-number">3.1.2. </span>Representaciones de dimensión finita<a class="headerlink" href="#representaciones-de-dimension-finita" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\((V, \pi)\)</span> una representación. Una representación <span class="math notranslate nohighlight">\(V\)</span> se llama de dimensión finita, si <span class="math notranslate nohighlight">\(dim (V) &lt; \infty\)</span>.</p>
+</div>
+<div class="section" id="subespacios-invariantes">
+<span id="id3"></span><h3><span class="section-number">3.1.3. </span>Subespacios Invariantes<a class="headerlink" href="#subespacios-invariantes" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\((V, \pi)\)</span> una representación. Un subespacio <span class="math notranslate nohighlight">\(U \subset V\)</span> se llama invariante, si <span class="math notranslate nohighlight">\(\pi (A) U \subset U\)</span>.</p>
+</div>
+<div class="section" id="representacion-irreducible">
+<h3><span class="section-number">3.1.4. </span>Representación Irreducible<a class="headerlink" href="#representacion-irreducible" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Una representación <span class="math notranslate nohighlight">\(V\)</span> se llama irreducible, si <span class="math notranslate nohighlight">\(0\)</span> y <span class="math notranslate nohighlight">\(V\)</span> son sus únicos <a class="reference internal" href="#subespacios-invariantes"><span class="std std-ref">Subespacios Invariantes</span></a>.</p>
+</div>
+<div class="section" id="la-categoria-rep-a">
+<h3><span class="section-number">3.1.5. </span>La categoría Rep(A)<a class="headerlink" href="#la-categoria-rep-a" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Denotamos <span class="math notranslate nohighlight">\(Rep(A)\)</span> a la categoría con objetos las representaciones de dimensión finita de <span class="math notranslate nohighlight">\(A\)</span> y con los entrelazados como morfismos. Las clases de equivalencia de representaciones corresponden a clases de isomorfismo de objetos en esta categoría.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>La mayoría de las personas dirían <span class="math notranslate nohighlight">\(A\)</span>-módulo (a izquierda) en lugar de representación. Nos atenemos a nuestra notación, debido a la estrecha conexión entre las álgebras de Hopf y la teoría de grupos.</p>
+</div>
+<p>En caso de que <span class="math notranslate nohighlight">\(A\)</span> sea una <a class="reference internal" href="00-nociones-preliminares.html#bialgebra"><span class="std std-ref">Biálgebra</span></a>, la categoría <span class="math notranslate nohighlight">\(Rep(A)\)</span> se puede dotar con un producto tensorial de la siguiente manera:</p>
+<ul>
+<li><p>Sea <span class="math notranslate nohighlight">\((V, \pi_{V}), (W, \pi_{W}) \in Obj(Rep(A))\)</span>, entonces el producto tensorial <span class="math notranslate nohighlight">\(V \otimes W\)</span> sobre <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> es nuevamente una representación con la acción de <span class="math notranslate nohighlight">\(A\)</span> dada por</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\pi_{V}\ast\pi_{W}:A\stackrel{\Delta}{\longrightarrow}A \otimes A\stackrel{\pi_{V}\otimes\pi_{W}}{\longrightarrow} End(V) \otimes End(W)\longrightarrow End(V \otimes W)\]</div>
+</div></blockquote>
+</li>
+</ul>
+<p>El cuerpo <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> también proporciona una representación vía la counidad <span class="math notranslate nohighlight">\(\pi_{\mathbb{F}}= \epsilon: A \to \mathbb{F} = Hom (\mathbb{F}, \mathbb{F})\)</span>, es decir,</p>
+<div class="math notranslate nohighlight">
+\[a \cdot \lambda = \epsilon (a) \cdot \lambda \text{ para } a \in A, \lambda \in \mathbb{F}.\]</div>
+<p>Es fácil comprobar que <span class="math notranslate nohighlight">\((V\otimes \mathbb{F}, \pi_{V}\ast\pi_{\mathbb{F}})\)</span> y <span class="math notranslate nohighlight">\((\mathbb{F}\otimes V, \pi_{\mathbb{F}} \ast\pi_{V})\)</span> son naturalmente isomorfos a <span class="math notranslate nohighlight">\((V, \pi_{V})\)</span> a través del isomorfismo obvio. Esto resulta ser la unidad tensorial en la categoría monoidal.</p>
+<p>Sea <span class="math notranslate nohighlight">\(\tau_{V,W} : V \otimes W \to W \otimes V\)</span> el mapa twist canónico y sea <span class="math notranslate nohighlight">\(\tau = \tau_{A,A}\)</span>. Observemos que</p>
+<div class="math notranslate nohighlight">
+\[\tau_{V,W} \circ (\pi_{V} \ast \pi_{W})(a) \circ \tau_{V,W}^{-1} = (\pi_{W} \ast^{op} \pi_{V})(a),\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\pi_{W}\ast^{op}\pi_{V}\)</span> está definido por</p>
+<div class="math notranslate nohighlight">
+\[\pi_{W}\ast^{op}\pi_{V}:A \stackrel{\Delta}{\longrightarrow}A \otimes A\stackrel{\tau}{\longrightarrow}A \otimes A\stackrel{\pi_{W}\otimes\pi_{V}}{\longrightarrow} End(W \otimes V)\]</div>
+<p>Dado que <span class="math notranslate nohighlight">\(\tau \circ \Delta\)</span> puede no coincidir con <span class="math notranslate nohighlight">\(\Delta\)</span>, los objetos <span class="math notranslate nohighlight">\((V \otimes W, \pi_{V} \ast \pi_{W})\)</span> y <span class="math notranslate nohighlight">\((W \otimes V, \pi_{W}\ast\pi_{V})\)</span> pueden ser no isomorfos en <span class="math notranslate nohighlight">\(Rep(A)\)</span>. Para obtener una categoría monoidal trenzada, necesitamos más estructura en la <a class="reference internal" href="00-nociones-preliminares.html#bialgebra"><span class="std std-ref">Biálgebra</span></a> <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="section" id="r-matriz-universal">
+<span id="matriz-universal"></span><h3><span class="section-number">3.1.6. </span>R-matriz universal<a class="headerlink" href="#r-matriz-universal" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> una <a class="reference internal" href="00-nociones-preliminares.html#bialgebra"><span class="std std-ref">Biálgebra</span></a>. Un elemento <span class="math notranslate nohighlight">\(R \in A\otimes A\)</span> se llama <span class="math notranslate nohighlight">\(R\)</span>-matriz universal, si es invertible y satisface los siguientes axiomas:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a)\)</span> <span class="math notranslate nohighlight">\((\tau \circ \Delta)(a) R = R \Delta(a)\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(b)\)</span> <span class="math notranslate nohighlight">\((id_{A} \otimes \Delta) (R) = R_{13} R_{12}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(a)\)</span> <span class="math notranslate nohighlight">\((\Delta \otimes id_{A}) (R) = R_{13} R_{23}.\)</span></p>
+</div></blockquote>
+<p>Aquí usamos la siguiente notación: Si <span class="math notranslate nohighlight">\(R = \sum_{i} a_{i} \otimes b_{i} \in A \otimes A\)</span>, entonces</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    R_{12} &amp;= \sum_{i} a_{i} \otimes b_{i} \otimes 1.\\
+    R_{13} &amp;= \sum_{i} a_{i} \otimes 1 \otimes b_{i},\\
+    R_{23} &amp;= \sum_{i} 1 \otimes a_{i} \otimes b_{i}.
+\end{align}\end{split}\]</div>
+</div>
+<div class="section" id="bialgebra-cuasi-triangular">
+<span id="cuasi-triangular"></span><h3><span class="section-number">3.1.7. </span>Biálgebra cuasi-triangular<a class="headerlink" href="#bialgebra-cuasi-triangular" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Una <a class="reference internal" href="00-nociones-preliminares.html#bialgebra"><span class="std std-ref">Biálgebra</span></a> <span class="math notranslate nohighlight">\(A\)</span> junto con una <a class="reference internal" href="#matriz-universal"><span class="std std-ref">R-matriz universal</span></a> se llama <a class="reference internal" href="#cuasi-triangular">cuasi-triangular</a>.</p>
+</div>
+<div class="section" id="lema">
+<span id="una-trenza-en-la-categoria-monoidal"></span><h3><span class="section-number">3.1.8. </span>Lema<a class="headerlink" href="#lema" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> una biálgebra <a class="reference internal" href="#cuasi-triangular">cuasi-triangular</a> con <a class="reference internal" href="#matriz-universal"><span class="std std-ref">R-matriz universal</span></a> <span class="math notranslate nohighlight">\(R\)</span>. Entonces</p>
+<div class="math notranslate nohighlight">
+\[\sigma_{V,W} : V \otimes W \stackrel{(\pi_{V}\otimes\pi_{W})(R)}{\longrightarrow}  V \otimes W \stackrel{\tau_{V,W}}{\longrightarrow} W \otimes V\]</div>
+<p>es una trenza en la categoría monoidal <span class="math notranslate nohighlight">\(Rep(A)\)</span>.</p>
+<p><strong>Demostración:</strong></p>
+<p>Primero tenemos que demostrar que <span class="math notranslate nohighlight">\(\sigma_{V,W}\)</span> es equivariante con respecto a las acciones <span class="math notranslate nohighlight">\(\pi_{V} ​​\ast \pi_{W}\)</span> y <span class="math notranslate nohighlight">\(\pi_{W} ​​\ast \pi_{V}\)</span> sobre <span class="math notranslate nohighlight">\(V \otimes W\)</span> y <span class="math notranslate nohighlight">\(W \otimes V\)</span> respectivamente. Esto se sigue del pequeño cálculo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \sigma_{V,W}(\pi_{V}\otimes\pi_{W})(\Delta(a))&amp;=\tau_{V,W}(\pi_{V} \otimes\pi_{W})(R)(\pi_{V}\otimes\pi_{W})(\Delta(a))\\
+                                            &amp;= \tau_{V,W}(\pi_{V} \otimes \pi_{W})(R \Delta(a))\\
+                                            &amp;= \tau_{V,W}(\pi_{V} \otimes \pi_{W})(\tau \Delta(a)) (\pi_{V} \otimes \pi_{W})(R)\\
+                                            &amp;= (\pi_{W} \otimes \pi_{V})(\Delta(a)) \tau_{V,W}(\pi_{V} \otimes \pi_{W})(R)\\
+                                            &amp;= (\pi_{W} \otimes \pi_{V})(\Delta(a)) \sigma_{V,W}
+\end{align}\end{split}\]</div>
+<p>donde usamos el punto <span class="math notranslate nohighlight">\(a)\)</span> de la Definición de <a class="reference internal" href="#matriz-universal"><span class="std std-ref">R-matriz universal</span></a>. Ahora sean <span class="math notranslate nohighlight">\(V_{1}\)</span>, <span class="math notranslate nohighlight">\(V_{2}\)</span> y <span class="math notranslate nohighlight">\(V_{3}\)</span> tres representaciones de <span class="math notranslate nohighlight">\(A\)</span> y denoten por <span class="math notranslate nohighlight">\(\alpha_{ijk}\)</span> los asociados correspondientes del producto tensorial. La conmutatividad del diagrama de trenzado.</p>
+<p>se desprende de la siguiente observación, en la que descuidamos a todos los asociados:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \sigma_{1,23} &amp;= ​​\tau_{1,23} ​​\pi_1 ​​\otimes (​​\pi_2 \ast ​​\pi_3)(R)\\
+                &amp;= ​​\tau_{1,23} (​​\pi_1 ​​\otimes ​​\pi_2 ​​\otimes ​​\pi_3)(id_{A} ​​\otimes \Delta)(R)\\
+                &amp;= ​​\tau_{1,23} (​​\pi_1 ​​\otimes ​​\pi_2 ​​\otimes ​​\pi_3)(​​R_{13} ​​R_{12})\\
+                &amp;= (​​id_{2}\otimes​​\tau_{1,3})(​​\tau_{1,2}​​\otimes ​​id_{3})(​​\pi_1​​\otimes​​\pi_2​\otimes​​\pi_3)(​​R_{13} ​​R_{12})\\
+                &amp;= (​​id_{2}\otimes​​\tau_{1,3})(​​\tau_{1,2}​​\otimes ​​id_{3})(​​\pi_1​​\otimes​​\pi_2​​\otimes​​\pi_3)(​​R_{13})(​​\pi_1 \otimes ​​\pi_2 ​​\otimes ​​\pi_3)(​​R_{12})\\
+                &amp;= (​​id_{2} ​​\otimes ​​\tau_{1,3}) ​​id_{2} ​​\otimes (​​\pi_1 ​​\otimes ​​\pi_3)(R) (​​\tau_{1,2} ​​\otimes ​​id_{3}) (​​\pi_1 ​​\otimes ​​\pi_2)(R) ​​\otimes ​​id_{3}\\
+                &amp;= (​​id_{2} ​​\otimes \sigma_{1,3}) \circ (\sigma_{1,2} ​​\otimes ​​id_{3})
+\end{align}\end{split}\]</div>
+<p>Aquí usamos la propiedad <span class="math notranslate nohighlight">\(b)\)</span> de la Definición de <a class="reference internal" href="#matriz-universal"><span class="std std-ref">R-matriz universal</span></a>. El diagrama correspondiente para <span class="math notranslate nohighlight">\(\sigma^{-1}\)</span> finalmente usa la propiedad <span class="math notranslate nohighlight">\(c)\)</span>. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Lo contrario de la declaración anterior también es cierto en el caso de que <span class="math notranslate nohighlight">\(A\)</span> sea una <a class="reference internal" href="00-nociones-preliminares.html#bialgebra"><span class="std std-ref">Biálgebra</span></a> de dimensión finita, ya que entonces <span class="math notranslate nohighlight">\(A \in Obj (Rep (A))\)</span>. Entonces tenemos: Si <span class="math notranslate nohighlight">\(Rep (A)\)</span> es trenzada, entonces <span class="math notranslate nohighlight">\(A\)</span> es <a class="reference internal" href="#cuasi-triangular">cuasi-triangular</a>. La <a class="reference internal" href="#matriz-universal"><span class="std std-ref">R-matriz universal</span></a> en este caso está dada por <span class="math notranslate nohighlight">\(R = \tau (\sigma_{A, A} (1 \otimes 1)) \in A \otimes A\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="algebras-de-hopf-y-duales">
+<h2><span class="section-number">3.2. </span>Álgebras de Hopf y Duales.<a class="headerlink" href="#algebras-de-hopf-y-duales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Como hemos visto en la última sección, la categoría de representación de una <a class="reference internal" href="00-nociones-preliminares.html#bialgebra"><span class="std std-ref">Biálgebra</span></a> <span class="math notranslate nohighlight">\(A\)</span> es monoidal. Si <span class="math notranslate nohighlight">\(A\)</span> es <a class="reference internal" href="#cuasi-triangular">cuasi-triangular</a>, entonces <span class="math notranslate nohighlight">\(Rep (A)\)</span>) incluso es trenzada.</p>
+<p>Usando la categoría de representaciones de dimensión finita de un grupo finito como guía, la siguiente estructura a considerar es la de representaciones duales: si <span class="math notranslate nohighlight">\(V\)</span> es una representación de <span class="math notranslate nohighlight">\(G\)</span>, entonces <span class="math notranslate nohighlight">\(G\)</span> también actúa sobre el espacio dual <span class="math notranslate nohighlight">\(V^{\ast}\)</span> vía <span class="math notranslate nohighlight">\(\xi \mapsto g \cdot \xi\)</span> con <span class="math notranslate nohighlight">\((g \cdot \xi) (v) = \xi (g^{-1} \cdot v)\)</span> para <span class="math notranslate nohighlight">\(\xi \in V \ast\)</span>, <span class="math notranslate nohighlight">\(v \in V\)</span> y <span class="math notranslate nohighlight">\(g\in G\)</span>. Generalizaremos esto al caso de las álgebras de Hopf. Para lograr esto, necesitamos las siguientes propiedades de la antípoda:</p>
+<div class="section" id="id4">
+<h3><span class="section-number">3.2.1. </span>Lema<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> un álgebra de Hopf con antípoda <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>, entonces tenemos</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a)\)</span> <span class="math notranslate nohighlight">\(\mathcal{S}(ab) = \mathcal{S}(b) \mathcal{S}(a)\)</span> para todo <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b \in A\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(b)\)</span> <span class="math notranslate nohighlight">\(\mathcal{S}(1) = 1\)</span>.</p>
+</div></blockquote>
+<p>En resumen: <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> es un anti-homomorfismo de álgebras.</p>
+<p><strong>Demostración:</strong></p>
+<p>Consideremos el espacio <span class="math notranslate nohighlight">\(Hom(A \otimes A, A)\)</span>. Esta es un álgebra con respecto a la siguiente operación:</p>
+<ul class="simple">
+<li><p>Sean <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(g \in Hom(A \otimes A, A)\)</span> y definimos</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f \ast g : A \otimes A \stackrel{\Delta \otimes \Delta}{\longrightarrow} A \otimes A \otimes A \otimes A \stackrel{id_{A} \otimes \tau \otimes id_{A}}{\longrightarrow} A \otimes A \otimes A \otimes A \stackrel{f \otimes g}{\longrightarrow} A \otimes A \stackrel{\mu}{\longrightarrow} A .\]</div>
+<ul class="simple">
+<li><p>La asociatividad de esta operación se deriva de la asociatividad de <span class="math notranslate nohighlight">\(\mu\)</span>.</p></li>
+<li><p>La coasociatividad de <span class="math notranslate nohighlight">\(\Delta\)</span>.</p></li>
+<li><p>Una unidad para <span class="math notranslate nohighlight">\(\ast\)</span> está dada por <span class="math notranslate nohighlight">\(a \otimes b \mapsto u(\epsilon(a)\epsilon(b))\)</span>, lo que denotaremos por <span class="math notranslate nohighlight">\(u(\epsilon \cdot \epsilon)\)</span>.</p></li>
+</ul>
+<p>Define <span class="math notranslate nohighlight">\(P : A \otimes A \to A\)</span> por <span class="math notranslate nohighlight">\(P = \mathcal{S} \circ \mu\)</span>, i.e. <span class="math notranslate nohighlight">\(P(a \otimes b) = \mathcal{S}(ab)\)</span> y observemos que</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    P \ast \mu &amp;= (\mathcal{S} \circ \mu) \ast \mu\\
+    &amp;= \mu \circ ((\mathcal{S} \circ \mu) \otimes \mu) \circ (id_{A} \otimes \tau \otimes id_{A}) \circ (\Delta \otimes \Delta)\\
+    &amp;= \mu \circ (\mathcal{S} \otimes id_{A}) \circ (\mu \otimes \mu) \circ (id_{A} \otimes \tau \otimes id_{A}) \circ (\Delta \otimes \Delta)\\
+    &amp;= \mu \circ (\mathcal{S} \otimes id_{A}) \circ \Delta \circ \mu\\
+    &amp;= (\mathcal{S} \ast id_{A}) \circ \mu = u\epsilon \circ \mu\\
+    &amp;= u(\epsilon \cdot \epsilon)
+\end{align}\end{split}\]</div>
+<p>donde hemos usado los diagramas <span class="math notranslate nohighlight">\((1)\)</span> y <span class="math notranslate nohighlight">\((2)\)</span> de la definición de <a class="reference internal" href="00-nociones-preliminares.html#bialgebra"><span class="std std-ref">Biálgebra</span></a>. De la misma manera, sea <span class="math notranslate nohighlight">\(N : A \otimes A \to A\)</span> dada por <span class="math notranslate nohighlight">\(N(a \otimes b) = \mathcal{S}(b) \mathcal{S}(a)\)</span>. Sea <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b \in A\)</span> y <span class="math notranslate nohighlight">\(\Delta(a) = \sum_{i} a^{(1)}_{i} \otimes a^{(2)}_{i}\)</span> y <span class="math notranslate nohighlight">\(\Delta(b) = \sum_{i} b^{(1)}_{i} \otimes b^{(2)}_{i}\)</span>. Notar que</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    (\mu \ast N)(a \otimes b) &amp;= \sum_{i,j}a^{(1)}_{i} b^{(1)}_{j} \mathcal{S} \left(b^{(2)}_{j} \right) \mathcal{S} \left(a^{(2)}_{i} \right)\\
+                              &amp;= \sum_{i}a^{(1)}_{i} (id_{A} \ast \mathcal{S})(b) \mathcal{S} \left(a^{(2)}_{i} \right)\\
+                              &amp;= u\epsilon(b) \sum_{i}a^{(1)}_{i} \mathcal{S} \left(a^{(2)}_{i} \right)\\
+                              &amp;= u\epsilon(b)(id_{A} \ast \mathcal{S})(a)\\
+                              &amp;= u(\epsilon(b)\epsilon(a))\\
+                              &amp;= u(\epsilon \cdot \epsilon)(a \otimes b).
+\end{align}\end{split}\]</div>
+<p>Ahora tenemos</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    P = P \ast u(\epsilon \cdot \epsilon)
+      = P \ast (\mu \ast N)
+      = (P \ast \mu) \ast N
+      = u(\epsilon \cdot \epsilon) \ast N
+      = N,
+\end{align}\]</div>
+<p>i.e. <span class="math notranslate nohighlight">\(\mathcal{S}(ab) = \mathcal{S}(b) \mathcal{S}(a)\)</span>. La segunda afirmación se deriva de</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{S}(1) = (\mathcal{S} \ast id_{A})(1) = (u\epsilon)(1) = 1.\]</div>
+<p><span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+<p>Como vemos en este lema, la antípoda <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> de un álgebra de <a class="reference internal" href="00-nociones-preliminares.html#hopf"><span class="std std-ref">Álgebra de Hopf</span></a> <span class="math notranslate nohighlight">\(A\)</span> nos permite definir una acción de <span class="math notranslate nohighlight">\(A\)</span> en el espacio dual <span class="math notranslate nohighlight">\(V ^{\ast} = Hom (V, \mathbb{F})\)</span> de una representación <span class="math notranslate nohighlight">\(V \in Obj (Rep (A))\)</span> a través de</p>
+<div class="math notranslate nohighlight">
+\[(a \cdot \xi)(v) = \xi(\pi_{V}(\mathcal{S}(a))v)\]</div>
+<p>para <span class="math notranslate nohighlight">\(\xi \in V^{\ast}\)</span>, <span class="math notranslate nohighlight">\(v \in V\)</span> y <span class="math notranslate nohighlight">\(a \in A\)</span>. Más generalmente para dos representaciones <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(W \in Obj (Rep (A))\)</span>, los homomorfismos <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>-lineales <span class="math notranslate nohighlight">\(Hom (V, W)\)</span> llevan una acción de <span class="math notranslate nohighlight">\(A\)</span> de la siguiente manera: Sean <span class="math notranslate nohighlight">\(a \in A\)</span> y <span class="math notranslate nohighlight">\(\Delta(a) = \sum_{i} a^{(1)}_{i} \otimes a^{(2)}_{i}\)</span>. Entonces para <span class="math notranslate nohighlight">\(f \in Hom(V, W)\)</span></p>
+<div class="math notranslate nohighlight">
+\[(a \cdot f)(v) = \sum_{i}\pi_{W}(a^{(1)}_{i}) f(\pi_{V}(\mathcal{S}(a^{(2)}_{i}))v)\]</div>
+<p>define una acción de <span class="math notranslate nohighlight">\(A\)</span>, donde usamos que <span class="math notranslate nohighlight">\(\Delta\)</span> es un homomorfismo de álgebra. Esto es consistente con la definición anterior, ya que para <span class="math notranslate nohighlight">\(a \in A\)</span> y <span class="math notranslate nohighlight">\(f \in Hom (V, \mathbb{F})\)</span> tenemos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    (a \cdot f)(v) &amp;= \sum_{i}\epsilon(a^{(1)}_{i})f(\mathcal{S}(a^{(2)}_{i})v)                 \\
+                   &amp;= f\left(\sum_{i}u\epsilon(a^{(1)}_{i} )\mathcal{S}(a^{(2)}_{i})v\right)    \\
+                   &amp;= f((u\epsilon {\ast} \mathcal{S})(a)v)                                     \\
+                   &amp;= f(\mathcal{S}(a)v) .
+\end{align}\end{split}\]</div>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">3.2.2. </span>Lema<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sean <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(W \in obj(Rep(A))\)</span>. El mapa canónico</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \kappa : W \otimes V^{\ast} &amp;\to Hom(V, W) ;\\
+    w \otimes \xi &amp;\mapsto (v \mapsto \xi(v) w)
+\end{align}\end{split}\]</div>
+<p>es una equivalencia de representaciones de <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>Demostración:</strong></p>
+<p>Sea <span class="math notranslate nohighlight">\(a \in A\)</span> con <span class="math notranslate nohighlight">\(\Delta(a) = \sum_{i} a^{(1)}_{i} \otimes a^{(2)}_{i}\)</span> y <span class="math notranslate nohighlight">\(w \otimes \xi \in W \otimes V^{\ast}\)</span>. entonces tenemos que para <span class="math notranslate nohighlight">\(v \in V\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \kappa (a (w \otimes \xi))(v) &amp;= \sum_{i} \kappa (a^{(1)}_{i} w \otimes a^{(2)}_{i} \xi)(v) \\
+                                  &amp;= \sum_{i} a^{(1)}_{i} w \xi (\mathcal{S}(a^{(2)}_{i} )v)    \\
+                                  &amp;= (a \kappa (w \otimes \xi))(v)
+\end{align}\end{split}\]</div>
+<p>donde hemos eliminado los endomorfismos <span class="math notranslate nohighlight">\(\pi_{V}\)</span>, <span class="math notranslate nohighlight">\(\pi_{W}\)</span>, etc. de nuestra notación. Esto prueba que <span class="math notranslate nohighlight">\(\kappa\)</span> es un entrelazado en el sentido de la ecuación <span class="math notranslate nohighlight">\((3)\)</span>. El hecho de que <span class="math notranslate nohighlight">\(\kappa\)</span> sea un isomorfismo es bien conocido por el álgebra lineal. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">3.2.3. </span>Lema<a class="headerlink" href="#id6" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(V \in obj(Rep(A))\)</span>. La unidad <span class="math notranslate nohighlight">\(u : \mathbb{F} \to End(V)\)</span> dada por <span class="math notranslate nohighlight">\(\lambda \mapsto \lambda id_{V}\)</span> es un entrelazamiento.</p>
+<p><strong>Demostración:</strong></p>
+<p>Sea <span class="math notranslate nohighlight">\(a \in A\)</span> con <span class="math notranslate nohighlight">\(\Delta(a) = \sum_{i} a^{(1)}_{i} \otimes a^{(2)}_{i}\)</span> y <span class="math notranslate nohighlight">\(v \in V\)</span>. Entonces la acción de <span class="math notranslate nohighlight">\(a\)</span> sobre <span class="math notranslate nohighlight">\(id_{V}\)</span> está dada por</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    (a \cdot id_{V})(v) = \sum_{i}a^{(1)}_{i} \mathcal{S}(a^{(2)}_{i} ) v = (id_{A} \ast \mathcal{S})(a) v = \epsilon (a)v.
+\end{align}\]</div>
+<p>La afirmación se deriva de esto. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">3.2.4. </span>Lema<a class="headerlink" href="#id7" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(V \in obj(Rep(A))\)</span>. El pairing <span class="math notranslate nohighlight">\(e_{V} : V^{\ast} \otimes V \to \mathbb{F}\)</span> es un entrelazamiento.</p>
+<p><strong>Demostración:</strong></p>
+<p>Sea <span class="math notranslate nohighlight">\(a \in A\)</span> con <span class="math notranslate nohighlight">\(\Delta(a) = \sum_{i} a^{(1)}_{i} \otimes a^{(2)}_{i}\)</span> y <span class="math notranslate nohighlight">\(\xi \otimes v \in V^{\ast} \otimes V\)</span>. Tenemos</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    e_{V}(a \cdot (\xi \otimes v)) = \sum_{i} e_{V}(a^{(1)}_{i} \xi \otimes a^{(2)}_{i} v) = \sum_{i} \xi(\mathcal{S}(a^{(1)}_{i} )a^{(2)}_{i} v) = \xi((\mathcal{S} \ast id_{A})(a) v) = \epsilon(a) \xi(v) .
+\end{align}\]</div>
+<p>Entonces, <span class="math notranslate nohighlight">\(e_{V}\)</span> es equivariante con respecto a la acción de <span class="math notranslate nohighlight">\(A\)</span>. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+<p>Combinando los dos últimos lemas, tenemos que <span class="math notranslate nohighlight">\(V^{\ast} \in obj(Rep(A))\)</span> junto con el entrelazamiento</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    &amp;e_{V}: V^{\ast} \otimes V \to k &amp;&amp;\text{ y }&amp; &amp;i_{V} : k \stackrel{u}{\longrightarrow} End(V) \stackrel{\kappa^{-1}}{\longrightarrow} V \otimes V^{\ast}
+\end{align}\]</div>
+<p>es un dual a derecha de <span class="math notranslate nohighlight">\(V\)</span> en el sentido de categoría monoidal rígida. Para ver esto, sea <span class="math notranslate nohighlight">\(e_{i} \in V\)</span> una base del espacio vectorial de dimensión finita <span class="math notranslate nohighlight">\(V\)</span> y denote por <span class="math notranslate nohighlight">\(e_{i} \in V^{\ast}\)</span> la base dual, entonces <span class="math notranslate nohighlight">\(i_{V} (1) = \sum_{i} e_{i} \otimes e_{i}\)</span>. Por lo tanto, para <span class="math notranslate nohighlight">\(v \in V\)</span></p>
+<div class="math notranslate nohighlight">
+\[(4) (id_{V} \otimes e_{V}) \circ (i_{V} \otimes id_{V})(v) = \sum_{i} e_{i} e_{i}(v) = v\]</div>
+<p>y para <span class="math notranslate nohighlight">\(\xi \in V^{\ast}\)</span></p>
+<div class="math notranslate nohighlight">
+\[(5) (e_{V} \otimes id_{V}\ast ) \circ (id_{V}\ast \otimes i_{V})(\xi) = \sum_{i}\xi(e_{i})e_{i} = \xi.\]</div>
+<p>Por lo tanto, las relaciones de serpenteo se mantienen. Es tentador pensar que no debería haber diferencia entre los duales izquierdo y derecho en la categoría <span class="math notranslate nohighlight">\(Rep (A)\)</span>, ya que <span class="math notranslate nohighlight">\((4)\)</span> y <span class="math notranslate nohighlight">\((5)\)</span> son solo una cuestión de álgebra lineal. Sin embargo, debido a la asimetría del producto tensorial, el lema 2.7 y el lema 2.9 no son válidos para estos duales izquierdos. Para obtener los duales derecho izquierdo 1, por lo tanto, necesitamos cambiar la acción de <span class="math notranslate nohighlight">\(A\)</span> sobre <span class="math notranslate nohighlight">\(Hom (V, k)\)</span>.</p>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> un álgebra de <a class="reference internal" href="00-nociones-preliminares.html#hopf"><span class="std std-ref">Álgebra de Hopf</span></a> sobre <span class="math notranslate nohighlight">\(\mathbb{F}\)</span> con antípoda invertible <span class="math notranslate nohighlight">\(\mathcal{S}\)</span> y defina <span class="math notranslate nohighlight">\({^{\ast}}V = Hom (V, k)\)</span> con la acción de <span class="math notranslate nohighlight">\(A\)</span> dada por</p>
+<div class="math notranslate nohighlight">
+\[(a \cdot \xi) (v) = \xi (\pi_{V} (\mathcal{S}^{-1} (a) )) v).\]</div>
+</div>
+<div class="section" id="id8">
+<h3><span class="section-number">3.2.5. </span>Lema<a class="headerlink" href="#id8" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sean <span class="math notranslate nohighlight">\(V \in obj(Rep(A))\)</span>, <span class="math notranslate nohighlight">\(e_{i}\)</span> una base de <span class="math notranslate nohighlight">\(V\)</span> y denotamos por <span class="math notranslate nohighlight">\(e^{i}\)</span> la base dual. El mapa</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    &amp;i_{V} : k \to {^{\ast}}V \otimes V &amp;&amp;;&amp; &amp;\lambda \mapsto \lambda \sum_{i}e^{i} \otimes e_{i}\\
+    &amp;e_{V} : V \otimes {^{\ast}}V \to k &amp;&amp;;&amp; &amp;v \otimes \xi \mapsto \xi(v)
+\end{align}\end{split}\]</div>
+<p>son entrelazamientos.</p>
+<p><strong>Demostración:</strong></p>
+<p>Sea <span class="math notranslate nohighlight">\(a \in A\)</span> y sea <span class="math notranslate nohighlight">\(\Delta(a) = \sum_{i} a^{(1)}_{i} \otimes a^{(2)}_{i}\)</span>. Ya que <span class="math notranslate nohighlight">\(\mathcal{S}^{-1}(1) = 1\)</span> tenemos que</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    e_{V}(a \cdot (v \otimes \xi)) &amp;= \sum_{i}e_{V}(a^{(1)}_{i} v \otimes a^{(2)}_{i} \xi)                      \\
+                                   &amp;= \sum_{i}\xi(\mathcal{S}^{-1}(a^{(2)}_{i} ) a^{(1)}_{i} v)                 \\
+                                   &amp;= \sum_{i}\xi(\mathcal{S}^{-1}(\mathcal{S}(a^{(1)}_{i} ) a^{(2)}_{i} ) v)   \\
+                                   &amp;= \xi(\mathcal{S}^{-1}((\mathcal{S} \ast id_{A})(a)) v)                     \\
+                                   &amp;= \xi(\mathcal{S}^{-1}(\epsilon(a)1)v)                                      \\
+                                   &amp;= \epsilon(a) \xi(v)                                                        \\
+                                   &amp;= a \cdot e_{V}(v \otimes \xi).
+\end{align}\end{split}\]</div>
+<p>La equivariancia del mapa lineal <span class="math notranslate nohighlight">\(i_{V}\)</span> solo necesita ser revisado en <span class="math notranslate nohighlight">\(1 \in \mathbb{F}\)</span>, i.e. <span class="math notranslate nohighlight">\(a\cdot i_{V}(1) = i_{V}(a\cdot 1)\)</span>. Esto se deduce de</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    a \cdot i_{V}(1) &amp;= \sum_{i,j}a^{(1)}_{i} e^{j} \otimes a^{(2)}_{i} e_{j}                                   \\
+                     &amp;= \sum_{i,j,k} a^{(1)}_{i} e^{j}(e_{k})e^{k} \otimes a^{(2)}_{i} e_{j}                    \\
+                     &amp;= \sum_{i,j,k} e^{j}(\mathcal{S}^{-1}(a^{(1)}_{i} )e_{k}) e^{k} \otimes a^{(2)}_{i} e_{j} \\
+                     &amp;= \sum_{i,j,k} e^{k} \otimes a^{(2)}_{i} e_{j} e^{j}(\mathcal{S}^{-1}(a^{(1)}_{i} )e_{k}) \\
+                     &amp;= \sum_{i,k} e^{k} \otimes a^{(2)}_{i} \mathcal{S}^{-1}(a^{(1)}_{i} )e_{k}                \\
+                     &amp;= \sum_{i,k} e^{k} \otimes \mathcal{S}^{-1}(a^{(1)}_{i} \mathcal{S}(a^{(2)}_{i} )) e_{k}  \\
+                     &amp;= \sum_{k} e^{k} \otimes \mathcal{S}^{-1}(\epsilon(a) 1) e_{k}                            \\
+                     &amp;= \epsilon(a) \sum_{k} e^{k} \otimes e_{k}                                                \\
+                     &amp;= i_{V}(a \cdot 1).
+\end{align}\end{split}\]</div>
+<p>Las ecuaciones análogas de <span class="math notranslate nohighlight">\((4)\)</span> y <span class="math notranslate nohighlight">\((5)\)</span> son válidas para <span class="math notranslate nohighlight">\({^{\ast}}V\)</span> mostrando que proporciona un dual izquierdo a <span class="math notranslate nohighlight">\(V\)</span>. Por lo tanto, hemos mostrado el</p>
+</div>
+<div class="section" id="teorema">
+<h3><span class="section-number">3.2.6. </span>Teorema<a class="headerlink" href="#teorema" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> un álgebra de <a class="reference internal" href="00-nociones-preliminares.html#hopf"><span class="std std-ref">Álgebra de Hopf</span></a> cuasi-triangular con antípoda invertible <span class="math notranslate nohighlight">\(A\)</span>. Entonces <span class="math notranslate nohighlight">\(Rep (A)\)</span> es una categoría monoidal trenzada rígida.</p>
+</div>
+</div>
+<div class="section" id="ribbon-hopf-algebras">
+<h2><span class="section-number">3.3. </span>Ribbon Hopf algebras.<a class="headerlink" href="#ribbon-hopf-algebras" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una categoría de cinta posee una identificación natural <span class="math notranslate nohighlight">\(\delta_{V} : V \to V^{\ast\ast}\)</span> que es compatible con el producto tensorial. Esto es equivalente a la siguiente definición</p>
+<div class="section" id="categoria-de-cinta">
+<h3><span class="section-number">3.3.1. </span>Categoría de cinta<a class="headerlink" href="#categoria-de-cinta" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Se dice que una categoría monoidal trenzada rígida <span class="math notranslate nohighlight">\((\mathcal{C}, \otimes, a, l, r, \mathbb{1})\)</span> es una categoría de cinta si viene equipada con una familia <span class="math notranslate nohighlight">\(\theta_{V}: V \to V\)</span> de isomorfismos indexados por <span class="math notranslate nohighlight">\(V \in obj (\mathcal{C})\)</span> que satisfacen</p>
+<p><span class="math notranslate nohighlight">\(a)\)</span> <span class="math notranslate nohighlight">\(\theta_{V\otimes W} = (\theta_{V} \otimes \theta_{W}) \sigma_{W,V} \circ \sigma_{V,W}\)</span></p>
+<p><span class="math notranslate nohighlight">\(b)\)</span> <span class="math notranslate nohighlight">\(\theta_{{V}^{\ast}} = (\theta_{V})^{\ast}\)</span></p>
+<p>donde <span class="math notranslate nohighlight">\(f^{\ast}\)</span> denota el morfismo adjunto a <span class="math notranslate nohighlight">\(f\)</span> en <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>. Los morfismos <span class="math notranslate nohighlight">\(\theta_{V}\)</span> se denominan <em>twists</em> de <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>.</p>
+<p>Esta definición tiene una imagen especular en álgebras de Hopf cuasi-triangulares, lo que asegura que la categoría de representación correspondiente sea cinta.</p>
+</div>
+<div class="section" id="algebra-de-hopf-de-cinta">
+<span id="id9"></span><h3><span class="section-number">3.3.2. </span>Álgebra de Hopf de cinta<a class="headerlink" href="#algebra-de-hopf-de-cinta" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\((A, \mu, u, \Delta,\epsilon, \mathcal{S}, R)\)</span> un álgebra de <a class="reference internal" href="00-nociones-preliminares.html#hopf"><span class="std std-ref">Álgebra de Hopf</span></a> cuasi-triangular con antípoda invertible. Un elemento invertible <span class="math notranslate nohighlight">\(\theta \in Z (A)\)</span> (donde <span class="math notranslate nohighlight">\(Z (A)\)</span> denota el centro de <span class="math notranslate nohighlight">\(A\)</span> como un álgebra) se llama un <em>twist</em>, si satisface</p>
+<p><span class="math notranslate nohighlight">\(a)\)</span> <span class="math notranslate nohighlight">\(\Delta(\theta) = (\tau(R)R)^{-1}(\theta \otimes \theta)\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(b)\)</span> <span class="math notranslate nohighlight">\(\mathcal{S}(\theta) = \theta\)</span>.</p>
+<p>Un álgebra de <a class="reference internal" href="00-nociones-preliminares.html#hopf"><span class="std std-ref">Álgebra de Hopf</span></a> cuasi-triangular <span class="math notranslate nohighlight">\(A\)</span> con antípoda invertible junto con un <em>twist</em> <span class="math notranslate nohighlight">\(\theta\)</span> se llama álgebra de <a class="reference internal" href="00-nociones-preliminares.html#hopf"><span class="std std-ref">Álgebra de Hopf</span></a> de cinta.</p>
+<p>Esta definición está diseñada para hacer que funcione el siguiente teorema.</p>
+</div>
+<div class="section" id="id10">
+<h3><span class="section-number">3.3.3. </span>Teorema<a class="headerlink" href="#id10" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> un <a class="reference internal" href="#algebra-de-hopf-de-cinta"><span class="std std-ref">Álgebra de Hopf de cinta</span></a> con <em>twist</em> <span class="math notranslate nohighlight">\(\theta \in Z(A)\)</span>. Luego <span class="math notranslate nohighlight">\(Rep (A)\)</span> junto con el morfismo natural</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    &amp;\theta_{V} : V \to V &amp;&amp;;&amp; &amp;v \mapsto \pi_{V}(\theta^{-1})(v)
+\end{align}\]</div>
+<p>es una categoría de cinta.</p>
+<p><strong>Demostración:</strong></p>
+<p>Dado que <span class="math notranslate nohighlight">\(\theta \in Z(A)\)</span>, la multiplicación por <span class="math notranslate nohighlight">\(\theta^{-1}\)</span> conmuta con la multiplicación por cualquier otro elemento <span class="math notranslate nohighlight">\(a \in A\)</span>. Por lo tanto, <span class="math notranslate nohighlight">\(\theta_{V}\)</span> es de hecho equivariante y define un isomorfismo en <span class="math notranslate nohighlight">\(Rep (A)\)</span>.</p>
+<p>Para demostrar que <span class="math notranslate nohighlight">\(\theta_{V}\)</span> define un twist, sea <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(W \in obj(Rep(A))\)</span>. Entonces tenemos para cada <span class="math notranslate nohighlight">\(v\in V\)</span>, <span class="math notranslate nohighlight">\(w\in W\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    (\theta_{V} \otimes \theta_{W}) \sigma_{W,V} \circ \sigma_{V,W}(v \otimes w) &amp;= (\pi_{V} \otimes \pi_{W})((\theta^{-1} \otimes \theta^{-1}) \tau(R) R)(v \otimes w)\\
+    &amp;= (\pi_{V} \otimes \pi_{W})(\Delta(\theta^{-1}))(v \otimes w)\\
+    &amp;= (\pi_{V} \ast \pi_{W})(\theta^{-1})(v \otimes w)\\
+    &amp;= \theta_{V}\otimes W(v \otimes w)\\
+\end{align}\end{split}\]</div>
+<p>por la condición <span class="math notranslate nohighlight">\(a)\)</span> de la Definition de <a class="reference internal" href="#algebra-de-hopf-de-cinta"><span class="std std-ref">Álgebra de Hopf de cinta</span></a>. Es más, para <span class="math notranslate nohighlight">\(\xi \in V^{\ast}\)</span> y <span class="math notranslate nohighlight">\(v \in V\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    (\theta_{V}) \ast(\xi)(v) &amp;= \xi(\theta_{V}(v))                 \\
+                              &amp;= \xi(\pi_{V}(\theta^{-1})(v))       \\
+                              &amp;= \xi(\pi_{V}(S(\theta^{-1}))(v))    \\
+                              &amp;= (\pi_{V} \ast(\theta^{-1})(\xi))(v)\\
+                              &amp;= \theta_{V} \ast(\xi)(v),
+\end{align}\end{split}\]</div>
+<p>donde hemos utilizado la propiedad <span class="math notranslate nohighlight">\(b)\)</span>.</p>
+</div>
+<div class="section" id="observacion">
+<h3><span class="section-number">3.3.4. </span>Observación<a class="headerlink" href="#observacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para álgebras de Hopf cuasi-triangulares de dimensión finita, el inverso de la declaración anterior también es cierto, es decir, si <span class="math notranslate nohighlight">\(Rep (A)\)</span> es una categoría de cinta, entonces <span class="math notranslate nohighlight">\(A\)</span> es un <a class="reference internal" href="#algebra-de-hopf-de-cinta"><span class="std std-ref">Álgebra de Hopf de cinta</span></a>. En este caso <span class="math notranslate nohighlight">\(A \in obj (Rep (A))\)</span> y de manera similar a las consideraciones anteriores, se puede verificar que <span class="math notranslate nohighlight">\(\theta = (\theta_{A} (1))^{-1}\)</span> proporciona un giro para <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="03-el-doble-cuantico-de-un-grupo-finito.html" class="btn btn-neutral float-right" title="4. El Doble Cuántico de un grupo finito" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="01-teoria-de-representaciones.html" class="btn btn-neutral float-left" title="2. Teoría de Representaciones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
